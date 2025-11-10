@@ -1,0 +1,11 @@
+{ 
+  "characters": [
+    { "id": "SirRatoncius",        "tribe": "Tutorial",       "displayName": "Sir Ratoncius",               "portrait": "sir_ratoncius.png" },
+    { "id": "AncianaPrisma",       "tribe": "Prisma",         "displayName": "Anciana del Prisma",          "portrait": "anciana_prisma.png" },
+    { "id": "LiderRaices",         "tribe": "RaicesAntiguas", "displayName": "Líder de Raíces",             "portrait": "lider_raices.png" },
+    { "id": "LiderHierro",         "tribe": "AlmaDeHierro",   "displayName": "Líder del Hierro",            "portrait": "lider_hierro.png" },
+    { "id": "InventorAlmaHierro",  "tribe": "AlmaDeHierro",   "displayName": "Inventor del Alma de Hierro", "portrait": "inventor_alma.png" },
+    { "id": "SacerdoteFe",         "tribe": "FeEterna",       "displayName": "Sacerdote de la Llama Azul",  "portrait": "sacerdote_fe.png" },
+    { "id": "MaestreDelOro",       "tribe": "Oro",            "displayName": "Maestre del Oro",             "portrait": "maestre_oro.png" }
+  ]
+}

@@ -1,0 +1,5481 @@
+{
+  "cards": [
+    {
+      "id": "tutorial_001",
+      "title": "Bienvenido al Reino amigo",
+      "description": "Soy Sir Ratoncius. Te enseñaré a decidir.",
+      "character": "SirRatoncius",
+      "tribeId": -1,
+      "isTutorial": true,
+      "optionA": {
+        "text": "Continuar",
+        "effects": [],
+        "setFlags": [
+          "tut_step1"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Saltar",
+        "effects": [],
+        "setFlags": [
+          "tut_step1"
+        ],
+        "next": ""
+      }
+    },
+    {
+      "id": "tutorial_002",
+      "title": "Barra de Recursos",
+      "description": "Cada decisión mueve los indicadores. Evita extremos.",
+      "character": "SirRatoncius",
+      "tribeId": -1,
+      "isTutorial": true,
+      "optionA": {
+        "text": "Entendido",
+        "effects": [],
+        "setFlags": [
+          "tut_step2"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Otra vez",
+        "effects": [],
+        "setFlags": [
+          "tut_step2"
+        ],
+        "next": ""
+      }
+    },
+    {
+      "id": "tutorial_003",
+      "title": "Opciones A/B",
+      "description": "Elige una opción. A veces hay una ruta 'next'.",
+      "character": "SirRatoncius",
+      "tribeId": -1,
+      "isTutorial": true,
+      "optionA": {
+        "text": "Probar A",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Probar B",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      }
+    },
+    {
+      "id": "tutorial_004",
+      "title": "Armonía",
+      "description": "Si todos los pueblos quedan entre 25 y 75, ganas +1 armonía.",
+      "character": "SirRatoncius",
+      "tribeId": -1,
+      "isTutorial": true,
+      "optionA": {
+        "text": "Continuar",
+        "effects": [],
+        "setFlags": [
+          "tut_harmony"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Continuar",
+        "effects": [],
+        "setFlags": [
+          "tut_harmony"
+        ],
+        "next": ""
+      }
+    },
+    {
+      "id": "tutorial_005",
+      "title": "Zonas de Calor",
+      "description": "Si un medidor se va a extremos, aparecen eventos de crisis.",
+      "character": "SirRatoncius",
+      "tribeId": -1,
+      "isTutorial": true,
+      "optionA": {
+        "text": "Listo",
+        "effects": [],
+        "setFlags": [
+          "tutorial_done"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Listo",
+        "effects": [],
+        "setFlags": [
+          "tutorial_done"
+        ],
+        "next": ""
+      }
+    },
+    {
+      "id": "prisma_001",
+      "title": "La Danza de Luz",
+      "description": "Un colectivo propone un festival lumínico para celebrar ritmos compartidos.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Aprobar festival",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 8
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -3
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 4
+          }
+        ],
+        "setFlags": [
+          "prisma_festival"
+        ],
+        "next": "prisma_followup_001"
+      },
+      "optionB": {
+        "text": "Posponer",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": -5
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 3
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "prisma_followup_001",
+      "title": "Resaca de Luz",
+      "description": "Tras el evento, surgen necesidades logísticas y pedidos de apoyo.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Financiar limpieza",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -4
+          },
+          {
+            "resource": "Prisma",
+            "delta": 3
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Ignorar petición",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": -4
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [
+        "prisma_festival"
+      ],
+      "requiredResourceConditions": [],
+      "tags": [],
+      "weight": 1
+    },
+    {
+      "id": "prisma_002",
+      "title": "Centro Seguro",
+      "description": "Un gremio del clan Prisma solicita un refugio creativo para artistas marginales.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Financiar centro",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 12
+          },
+          {
+            "resource": "Oro",
+            "delta": -6
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 3
+          }
+        ],
+        "setFlags": [
+          "prisma_center"
+        ],
+        "next": "prisma_followup_002"
+      },
+      "optionB": {
+        "text": "Apoyar con voluntariado",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 6
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 2
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "prisma_followup_002",
+      "title": "Talleres en el Centro",
+      "description": "Los talleres muestran impacto, pero requieren más recursos.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Pagar materiales",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 7
+          },
+          {
+            "resource": "Oro",
+            "delta": -5
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Buscar donaciones",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 4
+          },
+          {
+            "resource": "Oro",
+            "delta": 3
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [
+        "prisma_center"
+      ],
+      "requiredResourceConditions": [],
+      "tags": [],
+      "weight": 1
+    },
+    {
+      "id": "prisma_003",
+      "title": "Campaña Escolar",
+      "description": "Piden incluir educación sobre diversidad en escuelas.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Integrar programa",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 8
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -2
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 3
+          }
+        ],
+        "setFlags": [
+          "prisma_school"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Sugerir taller opcional",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 4
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "prisma_004",
+      "title": "Violencia en la Calle",
+      "description": "Se reportan incidentes hostiles hacia el colectivo luminaria.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Incrementar protección",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 6
+          },
+          {
+            "resource": "Oro",
+            "delta": -5
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          }
+        ],
+        "setFlags": [
+          "prisma_protection"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Campaña de visibilidad",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 5
+          },
+          {
+            "resource": "FeEterna",
+            "delta": -3
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 4
+    },
+    {
+      "id": "prisma_005",
+      "title": "Subvención Cultural",
+      "description": "Un colectivo solicita apoyo para una muestra de obras heteróclitas.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Dar subvención",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 6
+          },
+          {
+            "resource": "Oro",
+            "delta": -3
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Negar pero promover redes",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 3
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [],
+      "weight": 1
+    },
+    {
+      "id": "prisma_006",
+      "title": "Políticas Laborales",
+      "description": "Empresas proponen incentivos para integrar perfiles del gremio luminaria.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Ofrecer incentivos",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 7
+          },
+          {
+            "resource": "Oro",
+            "delta": -5
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          }
+        ],
+        "setFlags": [
+          "prisma_jobs"
+        ],
+        "next": "prisma_followup_006"
+      },
+      "optionB": {
+        "text": "Facilitar capacitación",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 5
+          },
+          {
+            "resource": "Oro",
+            "delta": -3
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "prisma_followup_006",
+      "title": "Primeros Contratados",
+      "description": "Las empresas reportan resultados mixtos y piden revisión.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Seguir con incentivos",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 5
+          },
+          {
+            "resource": "Oro",
+            "delta": -4
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Reasignar fondos a becas",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 6
+          },
+          {
+            "resource": "Oro",
+            "delta": -5
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [
+        "prisma_jobs"
+      ],
+      "requiredResourceConditions": [],
+      "tags": [],
+      "weight": 1
+    },
+    {
+      "id": "prisma_007",
+      "title": "Censo Invisible",
+      "description": "Proponen encuestas sobre afinidades culturales.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Incluir preguntas",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 6
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "prisma_census"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Respetar privacidad",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 3
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [],
+      "weight": 1
+    },
+    {
+      "id": "prisma_008",
+      "title": "Desplazamiento Forzado",
+      "description": "Cambios en el vecindario ponen en riesgo espacios comunitarios.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Negociar moratoria",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 6
+          },
+          {
+            "resource": "Oro",
+            "delta": -5
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 2
+          }
+        ],
+        "setFlags": [
+          "prisma_moratorium"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Ofrecer refugio temporal",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 4
+          },
+          {
+            "resource": "Oro",
+            "delta": -3
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "prisma_009",
+      "title": "Arte y Salud",
+      "description": "Proponen talleres de expresión para sanar grietas internas.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Financiar terapias",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 8
+          },
+          {
+            "resource": "Oro",
+            "delta": -5
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Programas comunitarios",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 5
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "prisma_010",
+      "title": "Retórica Hostil",
+      "description": "Un orador público lanza discursos contrarios al colectivo luminaria.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Contra-campaña",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 5
+          },
+          {
+            "resource": "FeEterna",
+            "delta": -4
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Ignorar y documentar",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 2
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "prisma_011",
+      "title": "Economía Colaborativa",
+      "description": "Piden microcréditos y espacios cooperativos.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Otorgar microcréditos",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 6
+          },
+          {
+            "resource": "Oro",
+            "delta": -4
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 2
+          }
+        ],
+        "setFlags": [
+          "prisma_microloan"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Conectar con ONGs",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 4
+          },
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "prisma_012",
+      "title": "Brecha Sanitaria",
+      "description": "Brechas de acceso a servicios de salud para el colectivo luminaria.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Clínica móvil",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 10
+          },
+          {
+            "resource": "Oro",
+            "delta": -6
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 3
+          }
+        ],
+        "setFlags": [
+          "prisma_clinic"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Campaña informativa",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 5
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "prisma_013",
+      "title": "Acoso en Internet",
+      "description": "Oleada de exposiciones dañinas en redes.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Leyes y sanciones",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 6
+          },
+          {
+            "resource": "Oro",
+            "delta": -5
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Campañas de apoyo",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 4
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "prisma_014",
+      "title": "Orgullo Local",
+      "description": "Quieren que la plaza principal tenga un mural.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Permitir mural",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 5
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "prisma_mural"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Negar permiso",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": -3
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [],
+      "weight": 1
+    },
+    {
+      "id": "prisma_015",
+      "title": "Crisis de Liderazgo",
+      "description": "Discusión interna amenaza fragmentar al movimiento.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Mediar",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 5
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Dejar que se autoorganice",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": -5
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 2
+    },
+    {
+      "id": "prisma_016",
+      "title": "Espacios de Empleo Seguro",
+      "description": "Una empresa propone espacios con políticas inclusivas.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Negociar convenio",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 7
+          },
+          {
+            "resource": "Oro",
+            "delta": -4
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Dejar que negocien directamente",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 4
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "prisma_017",
+      "title": "Interceptación de Fondos",
+      "description": "Sospechas de mal manejo de fondos destinados al gremio luminaria.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Investigar y recuperar",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 6
+          },
+          {
+            "resource": "Oro",
+            "delta": -3
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "prisma_investigation"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Aceptar compensación",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 3
+          },
+          {
+            "resource": "Oro",
+            "delta": 2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "prisma_018",
+      "title": "Alianza con Fe",
+      "description": "Un consejo propone diálogo público para mitigar tensiones.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Aceptar diálogo",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 5
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 5
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "prisma_dialogue"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Rechazar para mantener independencia",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": -3
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [],
+      "weight": 1
+    },
+    {
+      "id": "prisma_019",
+      "title": "Triunfo en Medios",
+      "description": "Un reportaje resalta relatos del colectivo luminaria.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Promocionar historias",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 6
+          },
+          {
+            "resource": "Oro",
+            "delta": -2
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Mantener perfil bajo",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 2
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [],
+      "weight": 1
+    },
+    {
+      "id": "prisma_020",
+      "title": "Ataque Coordinado",
+      "description": "Un grupo opositor convoca manifestaciones tensas.",
+      "character": "AncianaPrisma",
+      "tribeId": 1,
+      "optionA": {
+        "text": "Negociar con autoridades",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": -1
+          },
+          {
+            "resource": "Oro",
+            "delta": -3
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Responder con visibilidad y apoyo",
+        "effects": [
+          {
+            "resource": "Prisma",
+            "delta": 5
+          },
+          {
+            "resource": "FeEterna",
+            "delta": -4
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 4
+    },
+    {
+      "id": "raices_001",
+      "title": "El Bosque Susurra",
+      "description": "Los Custodios piden frenar la explotación en áreas de memoria. La medida protege las tradiciones locales pero limita la actividad minera.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Proteger bosque",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 12
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -3
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 2
+          },
+          {
+            "resource": "Oro",
+            "delta": -10
+          }
+        ],
+        "setFlags": [
+          "forest_protected"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Tala controlada",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -8
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 4
+          },
+          {
+            "resource": "Oro",
+            "delta": 12
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "raices_002",
+      "title": "Festival de Memorias",
+      "description": "Celebración de memorias y rituales antiguos. Algunos artistas urbanos sienten que pierden protagonismo frente a la comunidad local.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Financiar festival",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 10
+          },
+          {
+            "resource": "Prisma",
+            "delta": -2
+          },
+          {
+            "resource": "Oro",
+            "delta": -6
+          }
+        ],
+        "setFlags": [
+          "raices_festival"
+        ],
+        "next": "raices_followup_002"
+      },
+      "optionB": {
+        "text": "Apoyar solo logística",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 5
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          },
+          {
+            "resource": "Oro",
+            "delta": -3
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "raices_followup_002",
+      "title": "Talleres de Idioma",
+      "description": "Después del festival, piden crear talleres escolares. Esto fortalece la identidad local, aunque algunos artesanos urbanos ven menos oportunidad de participar.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Implementar talleres",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 8
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          },
+          {
+            "resource": "Oro",
+            "delta": -5
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Hacer programa piloto",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 4
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -1
+          },
+          {
+            "resource": "Oro",
+            "delta": -2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [
+        "raices_festival"
+      ],
+      "tags": [],
+      "weight": 1
+    },
+    {
+      "id": "raices_003",
+      "title": "Ruta Ancestral",
+      "description": "La comunidad quiere señalizar rutas y proteger un sitio arqueológico. La conservación limita algo de explotación turística, pero fortalece la identidad cultural.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Crear reservas",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 11
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          },
+          {
+            "resource": "Oro",
+            "delta": -8
+          }
+        ],
+        "setFlags": [
+          "raices_reserve"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Promover turismo controlado",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 5
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          },
+          {
+            "resource": "Oro",
+            "delta": 10
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "raices_004",
+      "title": "Conflicto por Agua",
+      "description": "Una empresa extrae agua y afecta las cosechas. Intervenir puede mejorar la relación con la comunidad pero genera tensión con rituales espirituales.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Negociar cuotas de extracción",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 7
+          },
+          {
+            "resource": "FeEterna",
+            "delta": -3
+          },
+          {
+            "resource": "Oro",
+            "delta": -5
+          }
+        ],
+        "setFlags": [
+          "raices_waterdeal"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Cerrar pozo comunitario",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -10
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 2
+          },
+          {
+            "resource": "Oro",
+            "delta": 8
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "raices_005",
+      "title": "Medicina Tradicional",
+      "description": "Integrar prácticas curativas fortalece la comunidad local, aunque algunas disciplinas urbanas pierden protagonismo.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Integrar conocimiento",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 7
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 2
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          },
+          {
+            "resource": "Oro",
+            "delta": -4
+          }
+        ],
+        "setFlags": [
+          "raices_medicine"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Solo documentar",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 3
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 1
+    },
+    {
+      "id": "raices_006",
+      "title": "Carbón y Minería",
+      "description": "El proyecto extractivo podría generar riqueza inmediata, pero amenaza territorios y la tradición de la comunidad.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Denunciar y frenar",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 10
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -3
+          },
+          {
+            "resource": "Oro",
+            "delta": -9
+          }
+        ],
+        "setFlags": [
+          "raices_miningban"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Aceptar compensación",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -7
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 3
+          },
+          {
+            "resource": "Oro",
+            "delta": 15
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 4
+    },
+    {
+      "id": "raices_007",
+      "title": "Educación Bicultural",
+      "description": "Solicitan materiales en lengua materna. Ayuda a fortalecer la identidad local, pero algunos recursos urbanos se sienten desplazados.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Proveer materiales",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 9
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          },
+          {
+            "resource": "Oro",
+            "delta": -6
+          }
+        ],
+        "setFlags": [
+          "raices_bilingual"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Programa voluntario",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 4
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          },
+          {
+            "resource": "Oro",
+            "delta": -2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "raices_008",
+      "title": "Mercado de Intercambio",
+      "description": "Quieren un mercado que impulse productos artesanales; Prisma aporta diseños, Raíces promociona técnicas locales. Algunas artesanías urbanas podrían perder visibilidad.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Crear mercado propio",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 7
+          },
+          {
+            "resource": "Prisma",
+            "delta": -2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -1
+          },
+          {
+            "resource": "Oro",
+            "delta": -5
+          }
+        ],
+        "setFlags": [
+          "raices_market"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Conectar con comercio urbano",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 1
+          },
+          {
+            "resource": "Oro",
+            "delta": 2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 1
+    },
+    {
+      "id": "raices_009",
+      "title": "Erosión y Cosechas",
+      "description": "Lluvias intensas dañan terrazas agrícolas. Intervenir ayuda a la comunidad, pero requiere esfuerzo de otras tribus para mantener la infraestructura.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Financiar terrazas",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 12
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          },
+          {
+            "resource": "Oro",
+            "delta": -8
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Asistencia temporal",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 6
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -1
+          },
+          {
+            "resource": "Oro",
+            "delta": -3
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "raices_010",
+      "title": "Tribu en Huelga",
+      "description": "Protestas por incumplimiento de acuerdos. Reabrir diálogo fortalece la comunidad, aunque genera fricciones con otras tribus que buscan estabilidad.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Reabrir diálogo",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 7
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          },
+          {
+            "resource": "Oro",
+            "delta": -4
+          }
+        ],
+        "setFlags": [
+          "raices_dialogue"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Usar fuerza para despejar",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -15
+          },
+          {
+            "resource": "Prisma",
+            "delta": 2
+          },
+          {
+            "resource": "Oro",
+            "delta": 8
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 4
+    },
+    {
+      "id": "raices_011",
+      "title": "Herencias en Riesgo",
+      "description": "Ancianos piden registrar saberes antes de que desaparezcan. La acción fortalece la memoria cultural pero requiere esfuerzo de otras tribus.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Crear archivo vivo",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 8
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          },
+          {
+            "resource": "Oro",
+            "delta": -5
+          }
+        ],
+        "setFlags": [
+          "raices_archive"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Documentar parcial",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 4
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 1
+    },
+    {
+      "id": "raices_012",
+      "title": "Comercio Desleal",
+      "description": "Intermediarios compran barato y venden caro. Promover cooperativas fortalece la economía local, pero limita beneficios de comerciantes urbanos.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Subsidio temporal",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 6
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          },
+          {
+            "resource": "Oro",
+            "delta": -6
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Promover cooperativas",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 9
+          },
+          {
+            "resource": "Prisma",
+            "delta": -2
+          },
+          {
+            "resource": "Oro",
+            "delta": -4
+          }
+        ],
+        "setFlags": [
+          "raices_coop"
+        ],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "raices_013",
+      "title": "Fiebre de Urbanización",
+      "description": "Jóvenes se mudan a la ciudad, debilitando tradiciones locales. Incentivar retorno fortalece identidad, pero puede generar tensiones urbanas.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Incentivar retorno con incentivos",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 6
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          },
+          {
+            "resource": "Oro",
+            "delta": -5
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Programas en ciudad",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          },
+          {
+            "resource": "Oro",
+            "delta": -2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 1
+    },
+    {
+      "id": "raices_014",
+      "title": "Ceremonia Interrumpida",
+      "description": "Autoridades cancelan una ceremonia por seguridad. Realizarla en secreto mantiene la tradición, pero genera riesgo y tensión con tribus urbanas.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Negociar permisos especiales",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 5
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          },
+          {
+            "resource": "Oro",
+            "delta": -3
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Realizar en secreto",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -5
+          },
+          {
+            "resource": "Prisma",
+            "delta": 2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 2
+    },
+    {
+      "id": "raices_015",
+      "title": "Programa de Salud Cultural",
+      "description": "Integrar asistentes de parto con saber local mejora la atención, aunque requiere recursos de otras tribus.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Capacitar y pagar honorarios",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 8
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 3
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          },
+          {
+            "resource": "Oro",
+            "delta": -7
+          }
+        ],
+        "setFlags": [
+          "raices_parteras"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Apoyo voluntario",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 3
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "raices_016",
+      "title": "Frontera y Migración",
+      "description": "Flujos de nuevas personas aumentan presión sobre recursos locales. Abrir soporte fortalece comunidad, pero exige coordinación con tribus vecinas.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Abrir soporte comunitario",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 5
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 1
+          },
+          {
+            "resource": "Oro",
+            "delta": -4
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Priorizar locales",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -4
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 2
+          },
+          {
+            "resource": "Oro",
+            "delta": 3
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 1
+    },
+    {
+      "id": "raices_017",
+      "title": "Reconocimiento Jurídico",
+      "description": "Piden títulos comunales para evitar desalojos. Con apoyo legal, otras tribus también sienten repercusión en sus derechos sobre recursos.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Apoyar títulos",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 12
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          },
+          {
+            "resource": "Oro",
+            "delta": -10
+          }
+        ],
+        "setFlags": [
+          "raices_titles"
+        ],
+        "next": "raices_followup_017"
+      },
+      "optionB": {
+        "text": "Negociar compensación",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -5
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          },
+          {
+            "resource": "Oro",
+            "delta": 12
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 3
+    },
+    {
+      "id": "raices_followup_017",
+      "title": "Registro Comunitario",
+      "description": "Con títulos, piden inversión en infraestructuras básicas. Mejora bienestar general pero exige colaboración de otras tribus.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Inversión en agua y luz",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 8
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -1
+          },
+          {
+            "resource": "Oro",
+            "delta": -9
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Programas de gestión",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 5
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -1
+          },
+          {
+            "resource": "Oro",
+            "delta": -4
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [
+        "raices_titles"
+      ],
+      "tags": [],
+      "weight": 1
+    },
+    {
+      "id": "raices_018",
+      "title": "Tráfico Cultural",
+      "description": "Artefactos salen a subasta fuera de la comunidad. Recuperarlos fortalece identidad, pero genera tensiones con comerciantes externos.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Recuperar piezas",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 6
+          },
+          {
+            "resource": "Prisma",
+            "delta": -2
+          },
+          {
+            "resource": "Oro",
+            "delta": -6
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Crear copias para venta",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          },
+          {
+            "resource": "Oro",
+            "delta": 5
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 1
+    },
+    {
+      "id": "raices_019",
+      "title": "Cambio Climático Local",
+      "description": "Alteraciones climáticas afectan prácticas y cultivos. Programas de adaptación benefician la comunidad, pero limitan extracción de recursos de otras tribus.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Programas de adaptación",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 9
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          },
+          {
+            "resource": "Oro",
+            "delta": -8
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Asistencia temporal",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 4
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -1
+          },
+          {
+            "resource": "Oro",
+            "delta": -3
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "raices_020",
+      "title": "Incendio en Territorio",
+      "description": "Un incendio arrasa zonas de alto valor comunitario. Las acciones de respuesta pueden ayudar a la tribu local pero afectan recursos de otras tribus cercanas.",
+      "character": "LiderRaices",
+      "tribeId": 4,
+      "optionA": {
+        "text": "Responder con brigadas",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -10
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 3
+          },
+          {
+            "resource": "FeEterna",
+            "delta": -2
+          },
+          {
+            "resource": "Oro",
+            "delta": -10
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Solicitar apoyo estatal",
+        "effects": [
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 5
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -1
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 2
+          },
+          {
+            "resource": "Oro",
+            "delta": -4
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 4
+    },
+    {
+      "id": "alma_001",
+      "title": "Rampas para Todos",
+      "description": "Se exige que cada edificio público tenga rampas y elevadores accesibles. Esto genera tensiones con sectores más conservadores.",
+      "character": "LiderHierro",
+      "tribeId": 2,
+      "optionA": {
+        "text": "Aprobar accesibilidad",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          },
+          {
+            "resource": "FeEterna",
+            "delta": -1
+          }
+        ],
+        "setFlags": [
+          "alma_rampas"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Rechazar propuesta",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -3
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "alma_002",
+      "title": "Transporte Adaptado",
+      "description": "Se propone modernizar el transporte público con accesibilidad universal.",
+      "character": "LiderHierro",
+      "tribeId": 2,
+      "optionA": {
+        "text": "Financiar transporte adaptado",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -3
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "alma_transporte"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Rechazar",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [
+        "alma_rampas"
+      ],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 2
+    },
+    {
+      "id": "alma_003",
+      "title": "Propuesta Educativa",
+      "description": "Se plantea capacitar a maestros en inclusión educativa para alumnos con discapacidad.",
+      "character": "LiderHierro",
+      "tribeId": 2,
+      "optionA": {
+        "text": "Financiar capacitación",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "alma_educacion"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "No invertir en capacitación",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "alma_004",
+      "title": "Lengua de Señas",
+      "description": "Se propone oficializar la lengua de señas en todas las escuelas, generando debates entre modernidad y tradición.",
+      "character": "LiderHierro",
+      "tribeId": 2,
+      "optionA": {
+        "text": "Aprobar lengua de señas",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "alma_senas"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Rechazar",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [
+        "alma_educacion"
+      ],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 2
+    },
+    {
+      "id": "alma_005",
+      "title": "Tecnología Asistiva",
+      "description": "Inversión en prótesis y sillas de ruedas inteligentes. Los clanes tradicionales desconfían de tanto avance.",
+      "character": "LiderHierro",
+      "tribeId": 2,
+      "optionA": {
+        "text": "Invertir en tecnología",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -3
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "alma_tecnologia"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "No invertir",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -3
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 2
+    },
+    {
+      "id": "alma_006",
+      "title": "Deporte Inclusivo",
+      "description": "Se organizan competencias deportivas adaptadas, lo que fomenta integración pero genera gastos extras.",
+      "character": "LiderHierro",
+      "tribeId": 2,
+      "optionA": {
+        "text": "Promover deportes inclusivos",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "alma_deporte"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Rechazar",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [
+        "alma_tecnologia"
+      ],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "alma_007",
+      "title": "Trabajo Inclusivo",
+      "description": "Se debate una ley que obliga a empresas a contratar un mínimo de personas con discapacidad.",
+      "character": "LiderHierro",
+      "tribeId": 2,
+      "optionA": {
+        "text": "Aprobar ley de inclusión laboral",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "alma_trabajo"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Rechazar propuesta",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -3
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [
+        "alma_educacion"
+      ],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 2
+    },
+    {
+      "id": "alma_008",
+      "title": "Arte Inclusivo",
+      "description": "Un colectivo propone que las expresiones artísticas incluyan narrativas sobre discapacidad.",
+      "character": "LiderHierro",
+      "tribeId": 2,
+      "optionA": {
+        "text": "Apoyar al colectivo",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "alma_arte"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Ignorar propuesta",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [
+        "alma_deporte"
+      ],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "alma_009",
+      "title": "Acceso Digital",
+      "description": "Se plantea garantizar que todas las páginas del reino tengan accesibilidad digital.",
+      "character": "LiderHierro",
+      "tribeId": 2,
+      "optionA": {
+        "text": "Aprobar normativa",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "alma_digital"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "No regular el acceso digital",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [
+        "alma_tecnologia"
+      ],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 2
+    },
+    {
+      "id": "alma_010",
+      "title": "Festival Inclusivo",
+      "description": "Un festival cultural desea tener secciones dedicadas a la discapacidad, pero algunos clanes lo ven como una exageración.",
+      "character": "LiderHierro",
+      "tribeId": 2,
+      "optionA": {
+        "text": "Apoyar festival",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "alma_festival"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Negar fondos",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -1
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [
+        "alma_arte"
+      ],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "alma_011",
+      "title": "Protestas Ciudadanas",
+      "description": "Colectivos exigen mayor rapidez en la implementación de leyes inclusivas.",
+      "character": "LiderHierro",
+      "tribeId": 2,
+      "optionA": {
+        "text": "Acceder a las demandas",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 3
+          }
+        ],
+        "setFlags": [
+          "alma_protestas"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Ignorar protestas",
+        "effects": [
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -3
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [
+        "alma_trabajo"
+      ],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "alma_012",
+      "title": "Recortes Presupuestales",
+      "description": "El consejo propone recortar fondos a programas inclusivos para financiar templos.",
+      "character": "LiderHierro",
+      "tribeId": 2,
+      "optionA": {
+        "text": "Mantener presupuesto inclusivo",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          },
+          {
+            "resource": "FeEterna",
+            "delta": -1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Aceptar recorte",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 2
+          }
+        ],
+        "setFlags": [
+          "alma_recorte"
+        ],
+        "next": ""
+      },
+      "requiredFlags": [
+        "alma_protestas"
+      ],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "alma_013",
+      "title": "Premio Internacional",
+      "description": "Un organismo extranjero ofrece un premio por los avances inclusivos del reino.",
+      "character": "LiderHierro",
+      "tribeId": 2,
+      "optionA": {
+        "text": "Aceptar el premio",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "alma_premio"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Rechazar por orgullo",
+        "effects": [
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -1
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [
+        "alma_festival"
+      ],
+      "requiredResourceConditions": [],
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "alma_014",
+      "title": "Choque con FeEterna",
+      "description": "Sectores religiosos consideran que las reformas inclusivas debilitan las tradiciones espirituales.",
+      "character": "LiderHierro",
+      "tribeId": 2,
+      "optionA": {
+        "text": "Defender inclusión sobre religión",
+        "effects": [
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 3
+          },
+          {
+            "resource": "FeEterna",
+            "delta": -2
+          }
+        ],
+        "setFlags": [
+          "alma_conflicto"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Dar prioridad a FeEterna",
+        "effects": [
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 3
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [
+        "alma_recorte"
+      ],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "alma_015",
+      "title": "Avance Científico",
+      "description": "Se descubre una nueva tecnología que mejora prótesis, pero requiere gran inversión inicial.",
+      "character": "LiderHierro",
+      "tribeId": 2,
+      "optionA": {
+        "text": "Invertir en la investigación",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -3
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 2
+          }
+        ],
+        "setFlags": [
+          "alma_ciencia"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "No arriesgar presupuesto",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [
+        "alma_digital"
+      ],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 2
+    },
+    {
+      "id": "alma_016",
+      "title": "Oposición Política",
+      "description": "Un grupo rival acusa al consejo de favoritismo hacia AlmaDeHierro y pide redistribuir apoyos.",
+      "character": "LiderHierro",
+      "tribeId": 2,
+      "optionA": {
+        "text": "Compartir recursos con otras tribus",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -1
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Ignorar oposición",
+        "effects": [
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          }
+        ],
+        "setFlags": [
+          "alma_oposicion"
+        ],
+        "next": ""
+      },
+      "requiredFlags": [
+        "alma_conflicto"
+      ],
+      "requiredResourceConditions": [],
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "alma_017",
+      "title": "Expansión Regional",
+      "description": "Se busca llevar los programas inclusivos a regiones rurales, con alto costo logístico.",
+      "character": "LiderHierro",
+      "tribeId": 2,
+      "optionA": {
+        "text": "Expandir programas",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -3
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 3
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "alma_expansion"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Mantener solo en ciudades",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [
+        "alma_trabajo"
+      ],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 2
+    },
+    {
+      "id": "alma_018",
+      "title": "Alianza con Prisma",
+      "description": "El gremio Prisma propone unir fuerzas para diseñar arquitecturas y tecnologías inclusivas.",
+      "character": "LiderHierro",
+      "tribeId": 2,
+      "optionA": {
+        "text": "Aceptar alianza",
+        "effects": [
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 3
+          },
+          {
+            "resource": "Oro",
+            "delta": -2
+          }
+        ],
+        "setFlags": [
+          "alma_prisma"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Rechazar propuesta",
+        "effects": [
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          },
+          {
+            "resource": "Prisma",
+            "delta": -2
+          },
+          {
+            "resource": "Oro",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [
+        "alma_ciencia"
+      ],
+      "requiredResourceConditions": [],
+      "tags": [],
+      "weight": 3
+    },
+    {
+      "id": "alma_019",
+      "title": "Tensión Económica",
+      "description": "Los programas inclusivos empiezan a tensionar seriamente la economía del reino.",
+      "character": "LiderHierro",
+      "tribeId": 2,
+      "optionA": {
+        "text": "Aumentar impuestos",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 3
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          }
+        ],
+        "setFlags": [
+          "alma_impuestos"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Recortar beneficios",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -3
+          }
+        ],
+        "setFlags": [
+          "alma_recorte2"
+        ],
+        "next": ""
+      },
+      "requiredFlags": [
+        "alma_expansion"
+      ],
+      "requiredResourceConditions": [],
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "alma_020",
+      "title": "Legado de Hierro",
+      "description": "El consejo debe decidir si consolidar a AlmaDeHierro como ejemplo de inclusión permanente en el reino.",
+      "character": "LiderHierro",
+      "tribeId": 2,
+      "optionA": {
+        "text": "Institucionalizar la inclusión",
+        "effects": [
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 5
+          },
+          {
+            "resource": "Prisma",
+            "delta": 2
+          },
+          {
+            "resource": "FeEterna",
+            "delta": -2
+          }
+        ],
+        "setFlags": [
+          "alma_legado"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Dejarlo como iniciativa temporal",
+        "effects": [
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 2
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "requiredFlags": [
+        "alma_prisma",
+        "alma_impuestos"
+      ],
+      "requiredResourceConditions": [],
+      "tags": [
+        "final"
+      ],
+      "weight": 5
+    },
+    {
+      "id": "fe_001",
+      "title": "Construcción de Templos",
+      "description": "La iglesia propone destinar fondos estatales para construir templos. Esto fortalece la fe, pero genera choques con artistas y tecnócratas.",
+      "character": "SacerdoteFe",
+      "tribeId": 3,
+      "optionA": {
+        "text": "Financiar templos",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -5
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 4
+          },
+          {
+            "resource": "Prisma",
+            "delta": -2
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -1
+          }
+        ],
+        "setFlags": [
+          "templosConstruidos"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "No destinar recursos",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "FeEterna",
+            "delta": -3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 4
+    },
+    {
+      "id": "fe_002",
+      "title": "Procesión multitudinaria",
+      "description": "Una gran procesión religiosa recorre la ciudad. Puede reforzar la unidad espiritual, pero también colapsa el tránsito y molesta a los ingenieros.",
+      "character": "SacerdoteFe",
+      "tribeId": 3,
+      "optionA": {
+        "text": "Apoyar la procesión",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": 3
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          }
+        ],
+        "setFlags": [
+          "procesion_apoyada"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Restringirla",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": -3
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 1
+          },
+          {
+            "resource": "Prisma",
+            "delta": 2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "fe_003",
+      "title": "Milagro en el mercado",
+      "description": "Un evento inexplicable en el mercado es considerado un milagro por los fieles. Los científicos lo rechazan como superstición.",
+      "character": "SacerdoteFe",
+      "tribeId": 3,
+      "optionA": {
+        "text": "Declarar milagro oficial",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": 5
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          }
+        ],
+        "setFlags": [
+          "milagroReconocido"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Atribuirlo a ciencia",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": -3
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 4
+    },
+    {
+      "id": "fe_004",
+      "title": "Refugio espiritual",
+      "description": "Un monasterio propone abrir sus puertas como refugio para pobres y viajeros. Puede ser visto como una acción piadosa, pero consume recursos.",
+      "character": "SacerdoteFe",
+      "tribeId": 3,
+      "optionA": {
+        "text": "Financiar el refugio",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -4
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 3
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "refugio_apoyado"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Negar apoyo",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "FeEterna",
+            "delta": -2
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "fe_005",
+      "title": "Predicadores callejeros",
+      "description": "Predicadores toman las plazas, generando fervor entre los creyentes pero caos en el orden público.",
+      "character": "SacerdoteFe",
+      "tribeId": 3,
+      "optionA": {
+        "text": "Tolerar la prédica",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": 4
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          },
+          {
+            "resource": "Oro",
+            "delta": -1
+          }
+        ],
+        "setFlags": [
+          "predicadores_tolerados"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Dispersarlos",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": -3
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 1
+          },
+          {
+            "resource": "Oro",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 4
+    },
+    {
+      "id": "fe_006",
+      "title": "Reliquia sagrada",
+      "description": "Una reliquia antigua es hallada en ruinas. La iglesia exige custodiarla, pero arqueólogos quieren estudiarla.",
+      "character": "SacerdoteFe",
+      "tribeId": 3,
+      "optionA": {
+        "text": "Entregar a la iglesia",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": 4
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -2
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          }
+        ],
+        "setFlags": [
+          "reliquia_controlada"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Dejar a los arqueólogos",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": -3
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 2
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "fe_007",
+      "title": "Impuesto para el clero",
+      "description": "El clero solicita un impuesto especial para financiar sus actividades. La propuesta divide a la sociedad.",
+      "character": "SacerdoteFe",
+      "tribeId": 3,
+      "optionA": {
+        "text": "Aprobar impuesto",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -5
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 4
+          },
+          {
+            "resource": "Prisma",
+            "delta": -2
+          }
+        ],
+        "setFlags": [
+          "impuesto_clero"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Rechazar impuesto",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "FeEterna",
+            "delta": -3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 4
+    },
+    {
+      "id": "fe_008",
+      "title": "Escuela parroquial",
+      "description": "La iglesia ofrece abrir escuelas con formación religiosa. Los ingenieros prefieren educación técnica.",
+      "character": "SacerdoteFe",
+      "tribeId": 3,
+      "optionA": {
+        "text": "Aceptar propuesta",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": 3
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          },
+          {
+            "resource": "Oro",
+            "delta": -2
+          }
+        ],
+        "setFlags": [
+          "escuela_parroquial"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Fomentar educación técnica",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": -2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          },
+          {
+            "resource": "Oro",
+            "delta": -1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "fe_009",
+      "title": "Sacrificio ritual",
+      "description": "Un sector extremista propone recuperar un antiguo ritual. La propuesta alarma a casi todos los demás clanes.",
+      "character": "SacerdoteFe",
+      "tribeId": 3,
+      "optionA": {
+        "text": "Permitir ritual",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": 5
+          },
+          {
+            "resource": "Prisma",
+            "delta": -3
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          }
+        ],
+        "setFlags": [
+          "ritual_extremista"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Prohibirlo",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": -4
+          },
+          {
+            "resource": "Prisma",
+            "delta": 2
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 5
+    },
+    {
+      "id": "fe_010",
+      "title": "Ayuno colectivo",
+      "description": "Los líderes religiosos promueven un ayuno nacional. Puede fortalecer la fe, pero afectar la productividad.",
+      "character": "SacerdoteFe",
+      "tribeId": 3,
+      "optionA": {
+        "text": "Promover ayuno",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": 4
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          },
+          {
+            "resource": "Oro",
+            "delta": -2
+          }
+        ],
+        "setFlags": [
+          "ayuno_apoyado"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Desalentar ayuno",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": -3
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          },
+          {
+            "resource": "Oro",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "fe_011",
+      "title": "Cruzada menor",
+      "description": "Algunos líderes religiosos sugieren enviar misioneros a tierras lejanas. La propuesta entusiasma a los fieles pero requiere recursos y genera choques con tecnócratas.",
+      "character": "SacerdoteFe",
+      "tribeId": 3,
+      "optionA": {
+        "text": "Autorizar cruzada",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": 5
+          },
+          {
+            "resource": "Oro",
+            "delta": -4
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          }
+        ],
+        "setFlags": [
+          "cruzada_menor"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Rechazar iniciativa",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": -3
+          },
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 5
+    },
+    {
+      "id": "fe_012",
+      "title": "Iconoclastas",
+      "description": "Un grupo radical destruye imágenes sagradas, alegando que son idolatría. Los artistas del Prisma protestan.",
+      "character": "SacerdoteFe",
+      "tribeId": 3,
+      "optionA": {
+        "text": "Castigar iconoclastas",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": 3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 2
+          },
+          {
+            "resource": "Oro",
+            "delta": -1
+          }
+        ],
+        "setFlags": [
+          "iconoclastas_castigados"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Apoyar reforma iconoclasta",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": -2
+          },
+          {
+            "resource": "Prisma",
+            "delta": -3
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "iconoclastas_apoyados"
+        ],
+        "next": ""
+      },
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 4
+    },
+    {
+      "id": "fe_013",
+      "title": "Profecía apocalíptica",
+      "description": "Un profeta anuncia el fin cercano del mundo. Algunos clanes caen en pánico, mientras otros aprovechan para manipular la situación.",
+      "character": "SacerdoteFe",
+      "tribeId": 3,
+      "optionA": {
+        "text": "Respaldar profecía",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": 4
+          },
+          {
+            "resource": "Prisma",
+            "delta": -2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          }
+        ],
+        "setFlags": [
+          "profecia_respaldo"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Desmentir profeta",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": -3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          }
+        ],
+        "setFlags": [
+          "profecia_rechazada"
+        ],
+        "next": ""
+      },
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 5
+    },
+    {
+      "id": "fe_014",
+      "title": "Curandero milagroso",
+      "description": "Un curandero afirma sanar enfermos con rezos. El pueblo se entusiasma, pero los médicos tecnócratas protestan.",
+      "character": "SacerdoteFe",
+      "tribeId": 3,
+      "optionA": {
+        "text": "Apoyar curandero",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": 3
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          },
+          {
+            "resource": "Oro",
+            "delta": -1
+          }
+        ],
+        "setFlags": [
+          "curandero_apoyado"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Respaldar medicina moderna",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": -2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          },
+          {
+            "resource": "Oro",
+            "delta": -1
+          }
+        ],
+        "setFlags": [
+          "curandero_rechazado"
+        ],
+        "next": ""
+      },
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "fe_015",
+      "title": "Exorcismo público",
+      "description": "La iglesia organiza un exorcismo masivo para purificar un barrio. Algunos lo ven como espectáculo peligroso.",
+      "character": "SacerdoteFe",
+      "tribeId": 3,
+      "optionA": {
+        "text": "Permitir exorcismo",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": 4
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          }
+        ],
+        "setFlags": [
+          "exorcismo_realizado"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Cancelar evento",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": -3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 4
+    },
+    {
+      "id": "fe_016",
+      "title": "Peregrinación sagrada",
+      "description": "Miles de fieles viajan a un santuario. La economía local florece, pero se agotan los recursos de la región.",
+      "character": "SacerdoteFe",
+      "tribeId": 3,
+      "optionA": {
+        "text": "Fomentar peregrinación",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": 4
+          },
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -2
+          }
+        ],
+        "setFlags": [
+          "peregrinacion_apoyada"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Restringir peregrinación",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": -3
+          },
+          {
+            "resource": "Oro",
+            "delta": -1
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "peregrinacion_restringida"
+        ],
+        "next": ""
+      },
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "fe_017",
+      "title": "Arte sacro",
+      "description": "Artistas del Prisma quieren colaborar con la iglesia para crear murales sagrados. Algunos clérigos consideran que distraen del mensaje.",
+      "character": "SacerdoteFe",
+      "tribeId": 3,
+      "optionA": {
+        "text": "Aprobar murales",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": 2
+          },
+          {
+            "resource": "Prisma",
+            "delta": 3
+          },
+          {
+            "resource": "Oro",
+            "delta": -2
+          }
+        ],
+        "setFlags": [
+          "murales_aprobados"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Rechazar propuesta",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": -2
+          },
+          {
+            "resource": "Prisma",
+            "delta": -2
+          },
+          {
+            "resource": "Oro",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "murales_rechazados"
+        ],
+        "next": ""
+      },
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "fe_018",
+      "title": "Dogma obligatorio",
+      "description": "El alto clero exige que todas las escuelas enseñen un dogma específico. Ingenieros y artistas protestan.",
+      "character": "SacerdoteFe",
+      "tribeId": 3,
+      "optionA": {
+        "text": "Imponer dogma",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": 5
+          },
+          {
+            "resource": "Prisma",
+            "delta": -2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          }
+        ],
+        "setFlags": [
+          "dogma_impuesto"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Rechazar dogma",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": -4
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          }
+        ],
+        "setFlags": [
+          "dogma_rechazado"
+        ],
+        "next": ""
+      },
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 5
+    },
+    {
+      "id": "fe_019",
+      "title": "Festival religioso",
+      "description": "La iglesia organiza un festival con música y ofrendas. Atrae multitudes, pero cuesta dinero y molesta a los clanes más tradicionales.",
+      "character": "SacerdoteFe",
+      "tribeId": 3,
+      "optionA": {
+        "text": "Patrocinar festival",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": 3
+          },
+          {
+            "resource": "Oro",
+            "delta": -3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 2
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -1
+          }
+        ],
+        "setFlags": [
+          "festival_realizado"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "No financiar",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": -2
+          },
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "festival_cancelado"
+        ],
+        "next": ""
+      },
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "fe_020",
+      "title": "Cisma interno",
+      "description": "Surge una división dentro de la iglesia. Un sector busca reformas, mientras los conservadores insisten en mantener la tradición.",
+      "character": "SacerdoteFe",
+      "tribeId": 3,
+      "optionA": {
+        "text": "Apoyar a reformistas",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": -2
+          },
+          {
+            "resource": "Prisma",
+            "delta": 2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "reforma_religiosa"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Apoyar conservadores",
+        "effects": [
+          {
+            "resource": "FeEterna",
+            "delta": 3
+          },
+          {
+            "resource": "Prisma",
+            "delta": -2
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -1
+          }
+        ],
+        "setFlags": [
+          "conservadores_apoyados"
+        ],
+        "next": ""
+      },
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 5
+    },
+    {
+      "id": "oro_001",
+      "title": "Mercado de Joyas",
+      "description": "Un gran intercambio de joyas se organiza en la plaza central; genera ganancias pero atrae a comerciantes rivales.",
+      "character": "Oro",
+      "tribeId": 5,
+      "optionA": {
+        "text": "Subvencionar el mercado",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 6
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -1
+          }
+        ],
+        "setFlags": [
+          "mercado_subvencionado"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Dejar que sea privado",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 3
+    },
+    {
+      "id": "oro_002",
+      "title": "Minas Abandonadas",
+      "description": "Un conjunto de minas promete riqueza si alguien las invierte; requieren maquinaria y mano de obra.",
+      "character": "Oro",
+      "tribeId": 5,
+      "optionA": {
+        "text": "Invertir en las minas",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -5
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 4
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -1
+          }
+        ],
+        "setFlags": [
+          "minas_invertidas"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "No arriesgar fondos",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 3
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 4
+    },
+    {
+      "id": "oro_003",
+      "title": "Moneda conmemorativa",
+      "description": "La ceca sugiere acuñar monedas conmemorativas para financiar obras públicas.",
+      "character": "Oro",
+      "tribeId": 5,
+      "optionA": {
+        "text": "Aprobar acuñación",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 4
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          }
+        ],
+        "setFlags": [
+          "moneda_acunada"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Rechazar propuesta",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -1
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "oro_004",
+      "title": "Banco Comunitario",
+      "description": "Un grupo propone crear un banco local para préstamos y microcréditos.",
+      "character": "Oro",
+      "tribeId": 5,
+      "optionA": {
+        "text": "Financiar el banco",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -4
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 2
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "banco_creado"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "No involucrarse",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 3
+    },
+    {
+      "id": "oro_005",
+      "title": "Ayuda para Poblaciones",
+      "description": "Se solicita un fondo temporal para ayudar a familias en extrema necesidad.",
+      "character": "Oro",
+      "tribeId": 5,
+      "optionA": {
+        "text": "Liberar el fondo de emergencia",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -3
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 2
+          }
+        ],
+        "setFlags": [
+          "fondo_emergencia"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Restringir desembolso",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 1
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 4
+    },
+    {
+      "id": "oro_006",
+      "title": "Festín de la Prosperidad",
+      "description": "Una festividad para celebrar abundancia puede incrementar el comercio pero consumir reservas.",
+      "character": "Oro",
+      "tribeId": 5,
+      "optionA": {
+        "text": "Patrocinar el festín",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -2
+          },
+          {
+            "resource": "Prisma",
+            "delta": 2
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "festin_patron"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Celebración privada",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 1
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 3
+    },
+    {
+      "id": "oro_007",
+      "title": "Corralón de Especulación",
+      "description": "Rastros de especulación financiera aparecen; se acusa al comercio de inflar precios.",
+      "character": "Oro",
+      "tribeId": 5,
+      "optionA": {
+        "text": "Imponer regulación",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          }
+        ],
+        "setFlags": [
+          "regulacion_impuesta"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Permitirse el mercado",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 3
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 5
+    },
+    {
+      "id": "oro_008",
+      "title": "Donación a la Biblioteca",
+      "description": "Una poderosa familia ofrece donar fondos para ampliar la biblioteca pública.",
+      "character": "Oro",
+      "tribeId": 5,
+      "optionA": {
+        "text": "Aceptar la donación",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 4
+          },
+          {
+            "resource": "Prisma",
+            "delta": 2
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "donacion_biblioteca"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Negociar condiciones",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 1
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "oro_009",
+      "title": "Subasta de Arte",
+      "description": "Se organiza una subasta con piezas de artistas locales; puede favorecer la cultura o provocar envidia.",
+      "character": "Oro",
+      "tribeId": 5,
+      "optionA": {
+        "text": "Comprar obras para el museo",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -4
+          },
+          {
+            "resource": "Prisma",
+            "delta": 4
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -1
+          }
+        ],
+        "setFlags": [
+          "compras_museo"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Dejar subasta privada",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "Prisma",
+            "delta": -2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "oro_010",
+      "title": "Comercio Exterior",
+      "description": "Propuesta de rutas comerciales extensas que podrían multiplicar ingresos pero requieren inversiones.",
+      "character": "Oro",
+      "tribeId": 5,
+      "optionA": {
+        "text": "Financiar rutas",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -6
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          }
+        ],
+        "setFlags": [
+          "rutas_financiadas"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Apostar por comercio local",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 3
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 5
+    },
+    {
+      "id": "oro_011",
+      "title": "Tasa a Lujo",
+      "description": "Se propone una tasa temporal sobre artículos de lujo para financiar infraestructuras.",
+      "character": "Oro",
+      "tribeId": 5,
+      "optionA": {
+        "text": "Imponer la tasa",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 3
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          },
+          {
+            "resource": "FeEterna",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "tasa_lujo"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Rechazar la tasa",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -2
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 3
+    },
+    {
+      "id": "oro_012",
+      "title": "Microcréditos Rurales",
+      "description": "Programa para otorgar pequeños créditos en zonas rurales con alto potencial agrícola.",
+      "character": "Oro",
+      "tribeId": 5,
+      "optionA": {
+        "text": "Lanzar programa piloto",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -3
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 3
+          }
+        ],
+        "setFlags": [
+          "microcreditos_lanzados"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Esperar resultados",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 4
+    },
+    {
+      "id": "oro_013",
+      "title": "Patentes Comerciales",
+      "description": "Se propone proteger nuevas invenciones con patentes que beneficien a inversores.",
+      "character": "Oro",
+      "tribeId": 5,
+      "optionA": {
+        "text": "Aprobar régimen de patentes",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 4
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          }
+        ],
+        "setFlags": [
+          "patentes_aprobadas"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Mantener acceso abierto",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -1
+          },
+          {
+            "resource": "Prisma",
+            "delta": 2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 4
+    },
+    {
+      "id": "oro_014",
+      "title": "Feria de Innovación",
+      "description": "Organizar una feria tecnológica que incentive alianzas entre artesanos y técnicos.",
+      "character": "Oro",
+      "tribeId": 5,
+      "optionA": {
+        "text": "Patrocinar la feria",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 3
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "feria_patron"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Apoyar con logística",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -1
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 3
+    },
+    {
+      "id": "oro_015",
+      "title": "Sobregiro Bancario",
+      "description": "El sistema financiero reporta un sobregiro masivo ligado a prácticas arriesgadas.",
+      "character": "Oro",
+      "tribeId": 5,
+      "optionA": {
+        "text": "Rescatar bancos",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -6
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 3
+          }
+        ],
+        "setFlags": [
+          "rescate_bancario"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Dejar que quiebren",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_high"
+      ],
+      "weight": 5
+    },
+    {
+      "id": "oro_016",
+      "title": "Inversión en Infraestructura",
+      "description": "Propuesta de carreteras y puentes para mejorar el comercio interno.",
+      "character": "Oro",
+      "tribeId": 5,
+      "optionA": {
+        "text": "Aprobar inversión",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -5
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 4
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "infra_invertida"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Postergar obras",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 4
+    },
+    {
+      "id": "oro_017",
+      "title": "Mercader Ambulante",
+      "description": "Un creciente de comerciantes ambulantes dinamiza zonas rurales; generan riqueza pero rompen reglas locales.",
+      "character": "Oro",
+      "tribeId": 5,
+      "optionA": {
+        "text": "Regularizar actividad",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          }
+        ],
+        "setFlags": [
+          "ambulantes_regulados"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Prohibirla",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -1
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": -2
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "oro_018",
+      "title": "Especie de Moneda Extraña",
+      "description": "Circulan monedas foráneas que desestabilizan precios locales; algunos piden control estricto.",
+      "character": "Oro",
+      "tribeId": 5,
+      "optionA": {
+        "text": "Controlar la circulación",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 2
+          }
+        ],
+        "setFlags": [
+          "control_monedas"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Permitir libre uso",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 3
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [
+        "crisis_low"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "oro_019",
+      "title": "Sello de Garantía",
+      "description": "Proponen un sello oficial que certifique calidad de artesanías para exportación.",
+      "character": "Oro",
+      "tribeId": 5,
+      "optionA": {
+        "text": "Crear sello oficial",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -2
+          },
+          {
+            "resource": "Prisma",
+            "delta": 2
+          },
+          {
+            "resource": "RaicesAntiguas",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "sello_creado"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Confiar en mercado",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 1
+          },
+          {
+            "resource": "Prisma",
+            "delta": -1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 2
+    },
+    {
+      "id": "oro_020",
+      "title": "Fondo de Investigación",
+      "description": "Un fondo para innovación aplicada propone subvenciones para proyectos con impacto económico.",
+      "character": "Oro",
+      "tribeId": 5,
+      "optionA": {
+        "text": "Crear el fondo",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": -4
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": 3
+          },
+          {
+            "resource": "Prisma",
+            "delta": 1
+          }
+        ],
+        "setFlags": [
+          "fondo_investigacion"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Fomentar inversión privada",
+        "effects": [
+          {
+            "resource": "Oro",
+            "delta": 2
+          },
+          {
+            "resource": "AlmaDeHierro",
+            "delta": -1
+          }
+        ],
+        "setFlags": [],
+        "next": ""
+      },
+      "tags": [],
+      "weight": 4
+    },
+   {
+      "id": "ending_001",
+      "title": "Un Nuevo Amanecer",
+      "description": "Has guiado al reino a la armonía. El sol se levanta sobre una era de paz.",
+      "character": "SirRatoncius",
+      "tribeId": -1,
+      "isEnding": true,
+      "requiredFlags": [
+        "victory_done"
+      ],
+      "optionA": {
+        "text": "Continuar",
+        "effects": [],
+        "setFlags": [
+          "end_step1"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Reflexionar",
+        "effects": [],
+        "setFlags": [
+          "end_step1"
+        ],
+        "next": ""
+      }
+    },
+    {
+      "id": "ending_002",
+      "title": "Las Voces del Pueblo",
+      "description": "Cada tribu agradece tus decisiones. El eco de su gratitud llena las plazas.",
+      "character": "SirRatoncius",
+      "tribeId": -1,
+      "isEnding": true,
+      "requiredFlags": [
+        "victory_done",
+        "end_step1"
+      ],
+      "optionA": {
+        "text": "Escuchar",
+        "effects": [],
+        "setFlags": [
+          "end_step2"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Sonreír",
+        "effects": [],
+        "setFlags": [
+          "end_step2"
+        ],
+        "next": ""
+      }
+    },
+    {
+      "id": "ending_003",
+      "title": "Recuerdos del Viaje",
+      "description": "Tus elecciones dejaron huella. El camino no fue fácil, pero fue tuyo.",
+      "character": "SirRatoncius",
+      "tribeId": -1,
+      "isEnding": true,
+      "requiredFlags": [
+        "victory_done",
+        "end_step2"
+      ],
+      "optionA": {
+        "text": "Recordar",
+        "effects": [],
+        "setFlags": [
+          "end_step3"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Seguir adelante",
+        "effects": [],
+        "setFlags": [
+          "end_step3"
+        ],
+        "next": ""
+      }
+    },
+    {
+      "id": "ending_004",
+      "title": "Un Legado",
+      "description": "Has tejido un futuro distinto, dejando tras de ti un legado de armonía.",
+      "character": "SirRatoncius",
+      "tribeId": -1,
+      "isEnding": true,
+      "requiredFlags": [
+        "victory_done",
+        "end_step3"
+      ],
+      "optionA": {
+        "text": "Aceptar",
+        "effects": [],
+        "setFlags": [
+          "end_step4"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Soñar",
+        "effects": [],
+        "setFlags": [
+          "end_step4"
+        ],
+        "next": ""
+      }
+    },
+    {
+      "id": "ending_005",
+      "title": "Gracias por Jugar",
+      "description": "Este no es un adiós, sino un hasta luego. Gracias por ser parte de la historia.",
+      "character": "SirRatoncius",
+      "tribeId": -1,
+      "isEnding": true,
+      "requiredFlags": [
+        "victory_done",
+        "end_step4"
+      ],
+      "optionA": {
+        "text": "Fin",
+        "effects": [],
+        "setFlags": [
+          "ending_done"
+        ],
+        "next": ""
+      },
+      "optionB": {
+        "text": "Fin",
+        "effects": [],
+        "setFlags": [
+          "ending_done"
+        ],
+        "next": ""
+      }
+    }
+  ]
+}
